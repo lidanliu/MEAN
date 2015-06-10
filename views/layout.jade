@@ -1,0 +1,9 @@
+doctype html
+html(ng-app='ngmodel')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js')
+    script(src='/javascripts/ang.js')
+  body(ng-controller='NgController as ngcontroller')
+    block content

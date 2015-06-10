@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1.
+		User List
+	ul
+		each user, i in dbtest
+			li
+				a(href="mailto:#{user.email}")= user.username
+
+		
+	div(ng-repeat='user in allusers')
+		h1 {{user.username}}
+		h2 {{user.email}}

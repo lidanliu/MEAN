@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div(ng-repeat='model in models')
+    h1 {{model.name}}
+    h2 {{model.price}}

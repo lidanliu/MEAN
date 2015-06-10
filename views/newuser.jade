@@ -1,0 +1,13 @@
+extends bootstrap
+
+block content
+	h1.row= title
+	form.row.form-inline#formAddUser(name="adduser",method="post",action="/adduser",role="form")
+		input.form-control#inputUserName(type="text", placeholder="username", name="username")
+		input.form-control#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+		button.form-control#btnSubmit(type="submit") submit
+	.col-md-12.row
+			table.table
+				tr(ng-repeat='user in allusers')
+					th {{user.username}}
+					th {{user.email}}
